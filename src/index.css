@@ -1,4 +1,14 @@
+@font-face {
+  font-family: Inter;
+  src: url("../src/assets/fonts/Inter_28pt-Regular.ttf");
+}
+
+
 @import "tailwindcss";
+
+@theme{
+  --font-inter:Inter,"sans-serif"
+}
 
 #root {
   min-height: 100vh;
@@ -12,8 +22,8 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1240px;
-  padding: 0px 20px;
+  max-width: 1440px;
+  padding: 0px 16px;
   margin-right: auto;
   margin-left: auto;
 }
