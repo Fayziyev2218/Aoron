@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './container/navbar';
 import { route } from './route';
 import Footer from './container/footer';
+import { Toaster } from 'sonner';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Router>
         <Navbar />
+              <Toaster richColors position="top-center" />
         <main>
           <Routes>
             {
