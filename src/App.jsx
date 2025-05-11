@@ -6,21 +6,22 @@ import Footer from './container/footer';
 function App() {
 
   return (
-   <>
-    <Router>
-      <Navbar/>
-      <main>
-        <Routes>
-          {
-                route.map((item, index) => (
-                    <Route key={index} index path={item.path} element={item.element}  />
-                ))
-              }
-        </Routes>
-      </main>
-      <Footer/>
-    </Router>
-   </>
+    <>
+      <Router>
+        <Navbar />
+        <main>
+          <Routes>
+            {
+              route.map((item, index) => (
+                <Route key={index} index path={item.path} element={item.element} />
+              ))
+            }
+
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </>
   )
 }
 

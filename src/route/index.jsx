@@ -33,7 +33,7 @@ export const route = [
         element: <SaveCards/>
     },
     {
-        path: '/product',
+        path: '/product/:id',
         element: <SingleCard />
     },
 ]
