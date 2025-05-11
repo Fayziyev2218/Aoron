@@ -3,7 +3,8 @@
 export default function Card(){
     return(
         <div>
-            card
+            <h1>Single crat</h1>
+            <h2>text</h2>
         </div>
     )
 }
