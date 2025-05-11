@@ -11,7 +11,6 @@ export default function Footer() {
     <>
       <footer className="bg-gray-50 w-full text-gray-700 pt-[64px] pb-[39px]">
         <div className="container">
-          
           <div className=" grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img src={logo} alt="Aoron Logo" className="mb-4 w-[80px] h-[64px]" />

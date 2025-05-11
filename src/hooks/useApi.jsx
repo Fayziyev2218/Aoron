@@ -1,7 +1,7 @@
 
 
 // src/hooks/useApi.js
-import axios from '../api/axios';
+import axios from '../hooks/axios';
 
 const useApi = () => {
   const getData = async (url) => {
