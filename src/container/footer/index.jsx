@@ -6,8 +6,38 @@ import {
 } from "react-icons/fa";
 import logo from "/logo.png";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
+import axios from "../../hooks/axios";
 
 export default function Footer() {
+  const sendMessage =(event)=>{
+    event.preventDefault()
+    const token = "7238149873:AAEBuK_9Motnu_SFd9X04HjxmG-UaJGO6S4"
+    const chatId = "862300228"
+    const url = `https://api.telegram.org/bot${token}/sendMessage`
+    const phone = document.getElementById("phone").value
+    const messageName = `Mail ${phone}`
+
+    axios({
+        url:url,
+        method: "POST",
+        data:{
+            chat_id: chatId,
+            text: messageName,
+        }
+    }).then((res)=>{
+        document.getElementById("myForm").reset()
+        toast.success("Message sent successfully! 🎉"),{
+          position: "top-center",
+          autoClose: 3000,
+        }
+    }).catch((rej)=>{
+      toast.error("There was an error. ❌", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    })
+  }
   return (
     <>
       <footer className="bg-gray-100 w-full text-gray-700 pt-[64px] pb-[39px]">
@@ -76,9 +106,10 @@ export default function Footer() {
                 Subscribe to receive updates, access to exclusive deals, and
                 more.
               </p>
-              <form>
+              <form onSubmit={sendMessage} id="myForm">
                 <div className="flex w-full">
                   <input
+                  id="phone"
                   type="email"
                   placeholder="Email"
                   className="w-full flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none"
