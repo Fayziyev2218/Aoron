@@ -3,12 +3,14 @@ import Navbar from './container/navbar';
 import { route } from './route';
 import Footer from './container/footer';
 import { Toaster } from 'sonner';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Navbar />
               <Toaster richColors position="top-center" />
         <main>

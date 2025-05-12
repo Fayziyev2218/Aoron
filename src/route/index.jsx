@@ -5,6 +5,7 @@ import Home from "../pages/home";
 import News from "../pages/news";
 import SaveCards from "../pages/saveCards";
 import SingleCard from "../pages/singleCard";
+import TermsOfService from "../pages/TermsOfService/TermsOfService";
 
 
 export const route = [
@@ -35,5 +36,9 @@ export const route = [
     {
         path: '/product/:id',
         element: <SingleCard />
+    },
+    {
+        path: '/terms',
+        element: <TermsOfService />
     },
 ]
