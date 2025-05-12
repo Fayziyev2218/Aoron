@@ -86,7 +86,7 @@ const Home = () => {
 
                 {/* View All Link */}
                 <div className="mt-5 text-center">
-                    ;
+                    
 
                     <Link
                         to="/catalog"
@@ -115,7 +115,7 @@ const Home = () => {
 
 
 
-                    4o
+                    
 
 
                 </div>
