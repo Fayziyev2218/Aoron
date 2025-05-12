@@ -1,13 +1,42 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
 export default function SaveCards() {
-  const cartItems = []; // Bu yerda siz real cart ma'lumotlarini joylashtirasiz (masalan, Redux yoki localStorage'dan)
+  const [cart, setCart] = useState([]);
+  const [subtotal, setSubtotal] = useState(0);
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(storedCart);
+  }, []);
+
+  useEffect(() => {
+    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    setSubtotal(total);
+  }, [cart]);
+
+  const updateQuantity = (id, type) => {
+    const updated = cart.map((item) => {
+      if (item.id === id) {
+        const newQty = type === "inc" ? item.quantity + 1 : Math.max(item.quantity - 1, 1);
+        return { ...item, quantity: newQty };
+      }
+      return item;
+    });
+    setCart(updated);
+    localStorage.setItem("cart", JSON.stringify(updated));
+  };
+
+  const removeItem = (id) => {
+    const updated = cart.filter((item) => item.id !== id);
+    setCart(updated);
+    localStorage.setItem("cart", JSON.stringify(updated));
+  };
 
   return (
-    <div className="container mx-auto px-4 py-10 md:py-16">
-      <h1 className="heading-lg mb-10 text-center">Your Cart</h1>
+    <div className="container mx-auto px-4 py-10 md:py-16 font-inter">
+      <h1 className="text-3xl font-bold mb-10 text-center">Your Cart</h1>
 
-      {cartItems.length === 0 ? (
+      {cart.length === 0 ? (
         <div className="text-center py-16 space-y-6">
           <div className="flex justify-center">
             <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center">
@@ -39,30 +68,30 @@ export default function SaveCards() {
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {/* Left: Products */}
           <div className="lg:col-span-2 space-y-6">
-            {cartItems.map((item, index) => (
+            {cart.map((item) => (
               <div
-                key={index}
+                key={item.id}
                 className="flex gap-4 border border-border rounded-lg p-4 animate-fade-in"
               >
                 <div className="w-26 h-32 bg-secondary/20 rounded-md overflow-hidden">
                   <img
-                    src={item.image}
+                    src={`https://testaoron.limsa.uz/${item.image}`}
                     className="w-full h-full object-cover object-center"
-                    alt={item.name}
+                    alt={item.title}
                   />
                 </div>
                 <div className="flex-grow sm:ml-4">
                   <div className="flex justify-between">
                     <div>
-                      <h3 className="font-medium">{item.name}</h3>
+                      <h3 className="font-medium">{item.title}</h3>
                       <div className="text-sm text-muted-foreground mt-1 space-y-1">
-                        <p>Sizes: {item.size}</p>
-                        <p>Colors: {item.color}</p>
+                        <p>Sizes: {item.size || "N/A"}</p>
+                        <p>Colors: {item.color || "N/A"}</p>
                       </div>
                     </div>
                     <button
+                      onClick={() => removeItem(item.id)}
                       className="text-muted-foreground hover:text-foreground"
                       aria-label="Remove item"
                     >
@@ -85,7 +114,10 @@ export default function SaveCards() {
                   </div>
                   <div className="flex justify-between items-end mt-4">
                     <div className="flex items-center">
-                      <button className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground border border-border rounded-l-md">
+                      <button
+                        onClick={() => updateQuantity(item.id, "dec")}
+                        className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground border border-border rounded-l-md"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="14"
@@ -108,7 +140,10 @@ export default function SaveCards() {
                         value={item.quantity}
                         readOnly
                       />
-                      <button className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground border border-border rounded-r-md">
+                      <button
+                        onClick={() => updateQuantity(item.id, "inc")}
+                        className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground border border-border rounded-r-md"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="14"
@@ -126,45 +161,37 @@ export default function SaveCards() {
                         </svg>
                       </button>
                     </div>
-                    <div className="font-medium">${item.price.toFixed(2)}</div>
+                    <div className="font-medium">${(item.price * item.quantity).toFixed(2)}</div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Right: Summary */}
+          {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-secondary p-6 rounded-lg">
               <h2 className="text-lg font-medium mb-4">Order Summary</h2>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>
-                    $
-                    {cartItems
-                      .reduce((total, item) => total + item.price * item.quantity, 0)
-                      .toFixed(2)}
-                  </span>
+                  <span>${subtotal.toFixed(2)}</span>
                 </div>
                 <div className="pt-3 border-t border-border flex justify-between font-medium">
                   <span>Total</span>
-                  <span>
-                    $
-                    {cartItems
-                      .reduce((total, item) => total + item.price * item.quantity, 0)
-                      .toFixed(2)}
-                  </span>
+                  <span>${subtotal.toFixed(2)}</span>
                 </div>
               </div>
-              <button className="w-full btn-primary mb-4">Checkout</button>
+              <button className="w-full bg-black text-white py-2 rounded-lg mb-4">
+                Checkout
+              </button>
               <a
-                className="block w-full text-center text-sm text-muted-foreground hover:text-foreground bg-[#000000] rounded-md py-2"
+                className="block w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                 href="/catalog"
               >
                 Continue Shopping
               </a>
-              <div className="mt-6 p-3 bg-accent rounded-md flex items-start space-x-2">
+              <div className="mt-6 p-3 bg-accent rounded-md flex items-start space-x-2 text-sm text-muted-foreground">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -175,15 +202,13 @@ export default function SaveCards() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-triangle-alert text-muted-foreground flex-shrink-0 mt-0.5"
+                  className="lucide lucide-triangle-alert flex-shrink-0 mt-0.5"
                 >
                   <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
                   <path d="M12 9v4" />
                   <path d="M12 17h.01" />
                 </svg>
-                <p className="text-xs text-muted-foreground">
-                  Delivery service is paid separately..
-                </p>
+                <p>Delivery service is paid separately.</p>
               </div>
             </div>
           </div>

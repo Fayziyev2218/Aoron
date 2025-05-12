@@ -7,7 +7,6 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [newArrivals, setNewArrivals] = useState([]);
 
-
     useEffect(() => {
         axios
             .get("https://testaoron.limsa.uz/api/product")
@@ -25,8 +24,8 @@ const Home = () => {
     }, []);
 
     return (
-        <main>
-            <ShowCase />
+        <div>
+             <ShowCase />
             <section className="py-5 px-4 max-w-7xl mx-auto font-inter">
                 {/* Featured Products */}
                 <div className="mb-10 text-center">
@@ -163,8 +162,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </main>
-
+        </div>
     );
 };
 
