@@ -176,19 +176,30 @@ const SingleCard = () => {
             <div className="py-10">
                 <div className="flex justify-between items-end mb-6">
                     <h2 className="text-2xl font-bold">New Arrivals</h2>
-                    <a className="text-sm font-medium hover:underline inline-flex items-center" href="/catalog">
+                    <Link to="/catalog" className="text-sm font-medium hover:underline inline-flex items-center">
                         View All Products
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="ml-1"
+                        >
                             <path d="M5 12h14"></path>
                             <path d="m12 5 7 7-7 7"></path>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     {newArrivals.map((product) => (
                         <div key={product.id} className="group relative overflow-hidden bg-white">
-                            <a href={`/product/${product.id}`} className="block">
+                            <Link to={`/product/${product.id}`} className="block">
                                 <div className="relative aspect-[3/4] bg-gray-100">
                                     <img
                                         src={`https://testaoron.limsa.uz/${product.images?.[0]}`}
@@ -196,13 +207,13 @@ const SingleCard = () => {
                                         className="w-full h-full object-cover transition-transform duration-300"
                                     />
                                 </div>
-                            </a>
+                            </Link>
                             <div className="p-4">
                                 <div className="flex justify-between items-center">
                                     <h3 className="text-sm font-semibold text-gray-800 mb-1">
-                                        <a href={`/product/${product.id}`} className="hover:text-blue-600">
+                                        <Link to={`/product/${product.id}`} className="hover:text-blue-600">
                                             {product.title_en}
-                                        </a>
+                                        </Link>
                                     </h3>
                                     <span className="text-sm font-bold text-gray-900">${product.price}</span>
                                 </div>

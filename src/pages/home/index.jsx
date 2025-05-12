@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ShowCase from "./showCase";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ const Home = () => {
 
     return (
         <div>
-             <ShowCase />
+            <ShowCase />
             <section className="py-5 px-4 max-w-7xl mx-auto font-inter">
                 {/* Featured Products */}
                 <div className="mb-10 text-center">
@@ -44,7 +45,7 @@ const Home = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {products.map((product) => (
                                 <div key={product.id} className="group relative overflow-hidden bg-white">
-                                    <a href={`/product/${product.id}`} className="block">
+                                    <Link to={`/product/${product.id}`} className="block">
                                         <div className="relative aspect-[3/4] bg-gray-100">
                                             <img
                                                 src={`https://testaoron.limsa.uz/${product.images?.[0]}`}
@@ -52,13 +53,13 @@ const Home = () => {
                                                 className="w-full h-full object-cover transition-transform duration-300"
                                             />
                                         </div>
-                                    </a>
+                                    </Link>
                                     <div className="p-4">
                                         <div className="flex justify-between items-center">
                                             <h3 className="text-sm font-semibold text-gray-800 mb-1">
-                                                <a href={`/product/${product.id}`} className="hover:text-blue-600">
+                                                <Link to={`/product/${product.id}`} className="hover:text-blue-600">
                                                     {product.title_en}
-                                                </a>
+                                                </Link>
                                             </h3>
                                             <span className="text-sm font-bold text-gray-900">${product.price}</span>
                                         </div>
@@ -85,8 +86,10 @@ const Home = () => {
 
                 {/* View All Link */}
                 <div className="mt-5 text-center">
-                    <a
-                        href="/catalog"
+                    ;
+
+                    <Link
+                        to="/catalog"
                         className="justify-center font-medium inline-flex items-center rounded-md border border-input bg-background px-6 py-3 text-sm transition-colors duration-200 hover:bg-gray-100 group"
                     >
                         View All Products
@@ -105,26 +108,46 @@ const Home = () => {
                             <path d="M5 12h14"></path>
                             <path d="m12 5 7 7-7 7"></path>
                         </svg>
-                    </a>
+                    </Link>
+
+
+
+
+
+
+                    4o
+
+
                 </div>
 
                 {/* New Arrivals */}
                 <div className="py-10">
                     <div className="flex justify-between items-end mb-6">
                         <h2 className="text-2xl font-bold">New Arrivals</h2>
-                        <a className="text-sm font-medium hover:underline inline-flex items-center" href="/catalog">
+                        <Link to="/catalog" className="text-sm font-medium hover:underline inline-flex items-center">
                             View All Products
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="ml-1"
+                            >
                                 <path d="M5 12h14"></path>
                                 <path d="m12 5 7 7-7 7"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                         {newArrivals.map((product) => (
                             <div key={product.id} className="group relative overflow-hidden bg-white">
-                                <a href={`/product/${product.id}`} className="block">
+                                <Link to={`/product/${product.id}`} className="block">
                                     <div className="relative aspect-[3/4] bg-gray-100">
                                         <img
                                             src={`https://testaoron.limsa.uz/${product.images?.[0]}`}
@@ -132,13 +155,13 @@ const Home = () => {
                                             className="w-full h-full object-cover transition-transform duration-300"
                                         />
                                     </div>
-                                </a>
+                                </Link>
                                 <div className="p-4">
                                     <div className="flex justify-between items-center">
                                         <h3 className="text-sm font-semibold text-gray-800 mb-1">
-                                            <a href={`/product/${product.id}`} className="hover:text-blue-600">
+                                            <Link to={`/product/${product.id}`} className="hover:text-blue-600">
                                                 {product.title_en}
-                                            </a>
+                                            </Link>
                                         </h3>
                                         <span className="text-sm font-bold text-gray-900">${product.price}</span>
                                     </div>
