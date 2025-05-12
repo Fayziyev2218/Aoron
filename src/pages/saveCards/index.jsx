@@ -62,9 +62,9 @@ export default function SaveCards() {
           <p className="text-muted-foreground max-w-md mx-auto">
             Looks like you haven't added anything to your cart yet.
           </p>
-          <a className="btn-primary mt-4 inline-block" href="/catalog">
+          <Link to="/catalog" className="btn-primary mt-4 inline-block">
             Continue Shopping
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -185,12 +185,12 @@ export default function SaveCards() {
               <button className="w-full bg-black text-white py-2 rounded-lg mb-4">
                 Checkout
               </button>
-              <a
+              <Link
+                to="/catalog"
                 className="block w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                href="/catalog"
               >
                 Continue Shopping
-              </a>
+              </Link>
               <div className="mt-6 p-3 bg-accent rounded-md flex items-start space-x-2 text-sm text-muted-foreground">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
