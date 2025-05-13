@@ -1,5 +1,6 @@
 import img from '../../assets/img/bg-home.avif'
 import arrow from '../../assets/img/arrow-right.svg'
+import { Link } from 'react-router-dom';
 
 const ShowCase = () => {
   return (
@@ -19,12 +20,12 @@ const ShowCase = () => {
             <p className='font-inter text-lg md:text-xl text-white/90 max-w-lg'>
               Quality fabrics. Perfect fit. Timeless style.
             </p>
-            <a className='font-inter group bg-white px-6 py-3 rounded-md inline-flex items-center hover:bg-white/90 transition-colors'
-              href="/catalog">
+            <Link className='font-inter group bg-white px-6 py-3 rounded-md inline-flex items-center hover:bg-white/90 transition-colors'
+              to="/catalog">
                 Explore Collection
                 <img className='w-5 h-5 ml-2 transition-transform group-hover:translate-x-1'
                 src={arrow} alt="arrow right" />
-              </a>
+              </Link>
           </div>
         </div>
       </div>
