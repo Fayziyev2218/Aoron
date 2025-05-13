@@ -4,6 +4,7 @@ import { route } from './route';
 import Footer from './container/footer';
 import { Toaster } from 'sonner';
 import ScrollToTop from './components/ScrollToTop';
+import '../i18n';
 
 function App() {
 
