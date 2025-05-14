@@ -27,55 +27,8 @@ const Home = () => {
     }, []);
 
     return (
-<<<<<<< HEAD
-      <section className="py-10 px-4 max-w-[95%] md:max-w-7xl mx-auto font-inter space-y-16">
-  {/* Featured Products */}
-  <div className="space-y-6 text-center">
-    <h2 className="text-3xl font-bold">Featured Products</h2>
-    <p className="text-gray-600 max-w-2xl mx-auto">
-      Discover our carefully selected collection of premium menswear, crafted with the finest materials and attention to detail.
-    </p>
-  </div>
+      <section>
 
-  {/* Featured Grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {loading ? (
-      <div className="col-span-full flex justify-center items-center py-10">
-        <div className="w-10 h-10 border-4 border-black border-t-transparent rounded-full animate-spin" />
-      </div>
-    ) : (
-      products.map((product) => (
-        <div key={product.id} className="group bg-white shadow-sm rounded-xl overflow-hidden transition hover:shadow-md">
-          <Link to={`/product/${product.id}`} className="block">
-            <div className="aspect-[3/4] bg-gray-100">
-              <img
-                src={`https://testaoron.limsa.uz/${product.images?.[0]}`}
-                alt={product.title_en || "Product"}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-          </Link>
-          <div className="p-4">
-            <div className="flex justify-between items-center mb-1">
-              <h3 className="text-sm font-semibold text-gray-800">
-                <Link to={`/product/${product.id}`} className="hover:text-blue-600">
-                  {product.title_en}
-                </Link>
-              </h3>
-              <span className="text-sm font-bold text-gray-900">${product.price}</span>
-            </div>
-            <p className="text-xs text-gray-500 line-clamp-2">{product.description_en}</p>
-            <div className="mt-2 flex space-x-1">
-              {product.colors?.map((color, i) => (
-                <div
-                  key={i}
-                  className="w-3 h-3 rounded-full border border-gray-300"
-                  style={{ backgroundColor: color.color_en }}
-                />
-              ))}
-            </div>
-          </div>
-=======
         <div>
             <ShowCase />
             <section className="py-5 px-4 max-w-7xl mx-auto font-inter">
@@ -225,11 +178,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
->>>>>>> 1035c8d9d74e224b6a34b57c3383aac0b4fcaf77
         </div>
-      ))
-    )}
-  </div>
+ 
 
   {/* View All Products Link */}
   <div className="text-center mt-10 flex">
@@ -310,8 +260,8 @@ const Home = () => {
       ))}
     </div>
   </div>
-</section>
 
+  </section>
     );
 };
 
