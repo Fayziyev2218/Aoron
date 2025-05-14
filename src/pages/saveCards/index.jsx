@@ -6,29 +6,29 @@ export default function SaveCards() {
   const [cart, setCart] = useState([]);
   const [subtotal, setSubtotal] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-const [buttonText, setButtonText] = useState("Send Message");
-const [loading, setLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Send Message");
+  const [loading, setLoading] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
-const SendMessage = async (event, setLoading, setButtonText, setIsModalOpen) => {
-  event.preventDefault(); // Предотвращаем перезагрузку страницы
-  setLoading(true);
-  setButtonText("Sending...");
+  const SendMessage = async (event, setLoading, setButtonText, setIsModalOpen) => {
+    event.preventDefault(); // Предотвращаем перезагрузку страницы
+    setLoading(true);
+    setButtonText("Sending...");
 
-  const token = '8008921149:AAFYLw0qJ0G6vUxg1K-VJdRft-H6H6m1rnI';
-  const chat_id = 6365725666;
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const token = '8008921149:AAFYLw0qJ0G6vUxg1K-VJdRft-H6H6m1rnI';
+    const chat_id = 6365725666;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-  const name = event.target.name.value;
-  const phone = event.target.phone.value;
-  const email = event.target.email.value;
-  const country = event.target.country.value;
-  const city = event.target.city.value;
-  const whatsapp = event.target.whatsapp.value;
+    const name = event.target.name.value;
+    const phone = event.target.phone.value;
+    const email = event.target.email.value;
+    const country = event.target.country.value;
+    const city = event.target.city.value;
+    const whatsapp = event.target.whatsapp.value;
 
-  const fullMessage = `📬 New Contact Info:
+    const fullMessage = `📬 New Contact Info:
 👤 Name: ${name}
 📞 Phone: ${phone}
 📧 Email: ${email}
@@ -36,25 +36,25 @@ const SendMessage = async (event, setLoading, setButtonText, setIsModalOpen) => 
 🏙️ City: ${city}
 📱 WhatsApp: ${whatsapp}`;
 
-  try {
-    await axios.post(url, {
-      chat_id: chat_id,
-      text: fullMessage,
-    });
+    try {
+      await axios.post(url, {
+        chat_id: chat_id,
+        text: fullMessage,
+      });
 
-    await new Promise((resolve) => setTimeout(resolve, 7000)); // опциональная задержка
+      await new Promise((resolve) => setTimeout(resolve, 7000)); // опциональная задержка
 
-    document.getElementById("myForm").reset(); // Сброс формы
-    setIsModalOpen(false); // Закрытие модального окна
-  } catch (error) {
-    console.error('Mission failed ❌', error);
-    // Можно заменить на alert или оставить только console.error
-    alert("Message sending failed. Please try again.");
-  } finally {
-    setLoading(false);
-    setButtonText("Send Message");
-  }
-};
+      document.getElementById("myForm").reset(); // Сброс формы
+      setIsModalOpen(false); // Закрытие модального окна
+    } catch (error) {
+      console.error('Mission failed ❌', error);
+      // Можно заменить на alert или оставить только console.error
+      alert("Message sending failed. Please try again.");
+    } finally {
+      setLoading(false);
+      setButtonText("Send Message");
+    }
+  };
 
 
 
@@ -90,123 +90,123 @@ const SendMessage = async (event, setLoading, setButtonText, setIsModalOpen) => 
   return (
     <div className="container mx-auto px-4 py-10 md:py-16 font-inter">
       <h1 className="text-3xl font-bold mb-10 text-center">Your Cart</h1>
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-<form
-  id="myForm"
-  onSubmit={(e) => SendMessage(e, setLoading, setButtonText, setIsModalOpen)}
-  className="bg-white p-4 sm:p-6 rounded-2xl w-full max-w-md mx-auto shadow-md relative animate-fade-in-up"
->
-  {/* Close Button */}
-  <button
-    type="button"
-    className="absolute top-2 right-3 text-red-500 text-2xl"
-    onClick={() => setIsModalOpen(false)}
-  >
-    ✕
-  </button>
-
-  <h2 className="text-xl sm:text-2xl font-semibold mb-5 text-center">Contact Info</h2>
-
-  {/* Name */}
-  <div className="mb-4">
-    <label className="block mb-1 text-sm font-medium">Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Your Name"
-      className="w-full border border-gray-300 rounded-lg p-3 text-sm"
-      required
-    />
-  </div>
-
-  {/* Phone */}
-  <div className="mb-4">
-    <label className="block mb-1 text-sm font-medium">Phone</label>
-    <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-      <span className="px-3 bg-gray-100 text-sm sm:text-base">🇺🇸 +1</span>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="Phone Number"
-        className="w-full p-3 text-sm outline-none"
-        required
-      />
-    </div>
-  </div>
-
-  {/* Email */}
-  <div className="mb-4">
-    <label className="block mb-1 text-sm font-medium">Email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Email"
-      className="w-full border border-gray-300 rounded-lg p-3 text-sm"
-      required
-    />
-  </div>
-
-  {/* Country */}
-  <div className="mb-4">
-    <label className="block mb-1 text-sm font-medium">Country</label>
-    <select
-      id="country"
-      name="country"
-      className="w-full border border-gray-300 rounded-lg p-3 text-sm"
-      required
+{isModalOpen && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+    <form
+      id="myForm"
+      onSubmit={(e) => SendMessage(e, setLoading, setButtonText, setIsModalOpen)}
+      className="bg-white p-4 sm:p-6 rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto mx-auto shadow-md relative animate-fade-in-up"
     >
-      <option>Please select</option>
-      <option>United States</option>
-      <option>Germany</option>
-      <option>Kazakhstan</option>
-      <option>Uzbekistan</option>
-    </select>
-  </div>
+      {/* Close Button */}
+      <button
+        type="button"
+        className="absolute top-2 right-3 text-red-500 text-2xl"
+        onClick={() => setIsModalOpen(false)}
+      >
+        ✕
+      </button>
 
-  {/* City */}
-  <div className="mb-4">
-    <label className="block mb-1 text-sm font-medium">City</label>
-    <input
-      type="text"
-      id="city"
-      name="city"
-      placeholder="City"
-      className="w-full border border-gray-300 rounded-lg p-3 text-sm"
-      required
-    />
-  </div>
+      <h2 className="text-xl sm:text-2xl font-semibold mb-5 text-center">Contact Info</h2>
 
-  {/* WhatsApp */}
-  <div className="mb-6">
-    <label className="block mb-1 text-sm font-medium">WhatsApp Number</label>
-    <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-      <span className="px-3 bg-gray-100 text-sm sm:text-base">🇺🇸 +1</span>
-      <input
-        type="tel"
-        id="whatsapp"
-        name="whatsapp"
-        placeholder="WhatsApp Number"
-        className="w-full p-3 text-sm outline-none"
-        required
-      />
-    </div>
-  </div>
+      {/* Name */}
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          className="w-full border border-gray-300 rounded-lg p-3 text-sm"
+          required
+        />
+      </div>
 
-  {/* Submit */}
-  <button
-    type="submit"
-    className="w-full bg-black text-white py-3 rounded-lg text-sm font-semibold hover:bg-opacity-90"
-  >
-    {buttonText}
-  </button>
-</form>
-
+      {/* Phone */}
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Phone</label>
+        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+          <span className="px-3 bg-gray-100 text-sm sm:text-base">🇺🇸 +1</span>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+            className="w-full p-3 text-sm outline-none"
+            required
+          />
         </div>
-      )}
+      </div>
+
+      {/* Email */}
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          className="w-full border border-gray-300 rounded-lg p-3 text-sm"
+          required
+        />
+      </div>
+
+      {/* Country */}
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Country</label>
+        <select
+          id="country"
+          name="country"
+          className="w-full border border-gray-300 rounded-lg p-3 text-sm"
+          required
+        >
+          <option>Please select</option>
+          <option>United States</option>
+          <option>Germany</option>
+          <option>Kazakhstan</option>
+          <option>Uzbekistan</option>
+        </select>
+      </div>
+
+      {/* City */}
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">City</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="City"
+          className="w-full border border-gray-300 rounded-lg p-3 text-sm"
+          required
+        />
+      </div>
+
+      {/* WhatsApp */}
+      <div className="mb-6">
+        <label className="block mb-1 text-sm font-medium">WhatsApp Number</label>
+        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+          <span className="px-3 bg-gray-100 text-sm sm:text-base">🇺🇸 +1</span>
+          <input
+            type="tel"
+            id="whatsapp"
+            name="whatsapp"
+            placeholder="WhatsApp Number"
+            className="w-full p-3 text-sm outline-none"
+            required
+          />
+        </div>
+      </div>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        className="w-full bg-black text-white py-3 rounded-lg text-sm font-semibold hover:bg-opacity-90"
+      >
+        {buttonText}
+      </button>
+    </form>
+  </div>
+)}
+
 
 
       {cart.length === 0 ? (
