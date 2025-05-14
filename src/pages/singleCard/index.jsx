@@ -10,6 +10,7 @@ const SingleCard = () => {
     const [isDetailsOpen, setIsDetailsOpen] = useState(false);
     const [quantity, setQuantity] = useState(1);
     const [newArrivals, setNewArrivals] = useState([]);
+    const [selectedColor, setSelectedColor] = useState(null); // To store the selected color
 
     // Mahsulotni olish
     useEffect(() => {
@@ -52,6 +53,7 @@ const SingleCard = () => {
                 price: parseFloat(product.price),
                 image: product.images?.[0] || "fallback-image.jpg",
                 quantity,
+                selectedColor: selectedColor || product.colors?.[0]?.color_en || "No color selected", // Add selected color to cart
             });
         }
 
@@ -101,8 +103,9 @@ const SingleCard = () => {
                                 product.colors.map((color, i) => (
                                     <div
                                         key={i}
-                                        className="w-5 h-5 rounded-full border border-gray-300"
+                                        className={`w-5 h-5 rounded-full border border-gray-300 cursor-pointer ${selectedColor === color.color_en ? "ring-2 ring-black" : ""}`}
                                         style={{ backgroundColor: color.color_en }}
+                                        onClick={() => setSelectedColor(color.color_en)} // Set the selected color
                                     />
                                 ))
                             ) : (
