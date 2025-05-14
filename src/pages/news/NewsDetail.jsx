@@ -1,37 +1,22 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { newsItems } from './newsData';
 
 export default function NewsDetail() {
-    const { id } = useParams();
-    const navigate = useNavigate();
+  const { id } = useParams();
+  const { t } = useTranslation();
 
-    const news = newsItems.find((item) => item.id === id);
+  const item = newsItems.find(n => n.id === id);
+  if (!item) return <p>Not found</p>;
 
-    if (!news) return <div className="text-center mt-20 text-red-500">News not found</div>;
-
-    return (
-        <div className='max-w-6xl mx-auto p-6 mb-4 mt-10 bg-white rounded-2xl shadow-xl'>
-            <button
-                onClick={() => navigate(-1)}
-                className='text-blue-600 hover:text-blue-800 text-sm mb-6 inline-flex items-center gap-1 transition duration-200'
-            >
-                ← Orqaga qaytish
-            </button>
-
-            <div className='flex flex-col gap-8 items-start'>
-                <div className='w-full rounded-2xl overflow-hidden shadow-md max-h-[500px]'>
-                    <img
-                        src={news.image}
-                        alt={news.title}
-                        className='w-full h-full object-cover rounded-2xl'
-                    />
-                </div>
-
-                <div className='w-full space-y-4'>
-                    <h1 className='text-3xl font-bold text-gray-900'>{news.title}</h1>
-                    <p className='text-gray-700 text-lg leading-loose'>{news.content}</p>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-10">
+      <img src={item.image} alt={t(item.title)} className="w-full rounded-xl mb-6" />
+      <h1 className="text-3xl font-bold mb-4">{t(item.title)}</h1>
+      <p className="text-gray-600 mb-2">{t(item.description)}</p>
+      <div className="text-gray-800 mt-6 leading-relaxed">
+        {t(item.content)}
+      </div>
+    </div>
+  );
 }

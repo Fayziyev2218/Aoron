@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ShowCase from "./showCase";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+    const { t } = useTranslation();
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [newArrivals, setNewArrivals] = useState([]);
@@ -30,9 +32,9 @@ const Home = () => {
             <section className="py-5 px-4 max-w-7xl mx-auto font-inter">
                 {/* Featured Products */}
                 <div className="mb-10 text-center">
-                    <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
+                    <h2 className="text-3xl font-bold mb-4">{t("home.featuredTitle")}</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Discover our carefully selected collection of premium menswear, crafted with the finest materials and attention to detail.
+                        {t("home.featuredDesc")}
                     </p>
                 </div>
 
@@ -49,7 +51,7 @@ const Home = () => {
                                         <div className="relative aspect-[3/4] bg-gray-100">
                                             <img
                                                 src={`https://testaoron.limsa.uz/${product.images?.[0]}`}
-                                                alt={product.title_en || "Mahsulot"}
+                                                alt={product.title_en || "Product"}
                                                 className="w-full h-full object-cover transition-transform duration-300"
                                             />
                                         </div>
@@ -86,13 +88,11 @@ const Home = () => {
 
                 {/* View All Link */}
                 <div className="mt-5 text-center">
-                    
-
                     <Link
                         to="/catalog"
                         className="justify-center font-medium inline-flex items-center rounded-md border border-input bg-background px-6 py-3 text-sm transition-colors duration-200 hover:bg-gray-100 group"
                     >
-                        View All Products
+                        {t("home.viewAll")}
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -109,23 +109,14 @@ const Home = () => {
                             <path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </Link>
-
-
-
-
-
-
-                    
-
-
                 </div>
 
                 {/* New Arrivals */}
                 <div className="py-10">
                     <div className="flex justify-between items-end mb-6">
-                        <h2 className="text-2xl font-bold">New Arrivals</h2>
+                        <h2 className="text-2xl font-bold">{t("home.newArrivals")}</h2>
                         <Link to="/catalog" className="text-sm font-medium hover:underline inline-flex items-center">
-                            View All Products
+                            {t("home.viewAll")}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="14"
@@ -151,7 +142,7 @@ const Home = () => {
                                     <div className="relative aspect-[3/4] bg-gray-100">
                                         <img
                                             src={`https://testaoron.limsa.uz/${product.images?.[0]}`}
-                                            alt={product.title_en || "Mahsulot"}
+                                            alt={product.title_en || "Product"}
                                             className="w-full h-full object-cover transition-transform duration-300"
                                         />
                                     </div>

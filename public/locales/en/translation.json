@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "about": "About",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "showcase": {
+    "season": "Spring/Summer 2025",
+    "title": "Premium Menswear",
+    "subtitle": "Quality fabrics. Perfect fit. Timeless style.",
+    "button": "Explore Collection"
+  },
+  "home": {
+    "featuredTitle": "Featured Products",
+    "featuredDesc": "Discover our carefully selected collection of premium menswear, crafted with the finest materials and attention to detail.",
+    "viewAll": "View All Products",
+    "newArrivals": "New Arrivals"
+  },
+  "footer": {
+    "description": "Premium quality menswear focused on exceptional materials and perfect fit.",
+    "shop": "SHOP",
+    "viewAll": "View All Products",
+    "tshirts": "t-shirts",
+    "shorts": "shorts",
+    "suits": "suits",
+    "company": "COMPANY",
+    "about": "About",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "deliveryTerm": "Delivery term",
+    "subscribeTitle": "SUBSCRIBE TO OUR NEWSLETTER",
+    "subscribeDescription": "Subscribe to receive updates, access to exclusive deals, and more.",
+    "placeholderEmail": "Email",
+    "successMessage": "Message sent successfully! 🎉",
+    "errorMessage": "There was an error. ❌",
+    "copyright": "© 2025 AORON. All rights reserved."
+  },
+
+  "title": "About AORON",
+  "description": "AORON is a manufacturing brand offering stylish, quality and competitive apparel for B2B partnerships. We have been operating since 1991 and specialize in creating men's and women's clothing, focused on wholesale, retail chains and custom orders for brands and boutiques.",
+  "directions_title": "Today we develop two directions:",
+  "directions": [
+    "Prince - a classic line of men's suits, proven by time and quality",
+    "AORON - a modern brand with an expanded assortment: from casual wear to accessories and shoes"
+  ],
+  "production_title": "Production facilities",
+  "production_text": "Our company started with a team of 4 people and today employs over 100 people. In the summer of 2025, we are launching a new factory with the ability to scale production - up to 500 employees and 5000+ units per month.",
+  "offer_title": "We offer:",
+  "offer_list": [
+    "Stable volumes and delivery terms",
+    "Quality control at every stage",
+    "Flexibility to work under private label",
+    "Individual approach to B2B clients"
+  ],
+  "why_title": "Why choose us",
+  "why_list": [
+    "More than 30 years of experience in the market of Uzbekistan",
+    "Full cycle of production - from design to packaging",
+    "Ability to create collections for your brand",
+    "Modern models inspired by global trends",
+    "Favorable conditions for distributors, marketplaces and stores"
+  ],
+  "assortment_title": "New assortment 2025",
+  "assortment_subtitle": "Men's and women's T-shirts, shirts, shorts",
+  "assortment_list": [
+    "Men's and women's T-shirts, shirts, shorts",
+    "Shoes, bags, belts, accessories",
+    "Custom tailoring",
+    "Collaborations and capsule collections to your specifications"
+  ],
+  "cooperation_title": "Ready for cooperation",
+  "cooperation_subtitle": "We are open to cooperation with:",
+  "cooperation_list": [
+    "wholesale buyers",
+    "clothing stores",
+    "marketplaces",
+    "international buyers",
+    "brands willing to produce collections under their name"
+  ],
+  "contact_text": "Contact us to get catalog, samples",
+  "mission_title": "Our Mission",
+  "mission_text": "To create exceptional menswear that empowers men to look and feel their best, while maintaining a commitment to quality, sustainability, and ethical practices.",
+  "values_title": "Our Values",
+  "values": [
+    {
+      "title": "Sustainability",
+      "text": "We're committed to reducing our environmental impact through responsible sourcing and sustainable practices."
+    },
+    {
+      "title": "Quality First",
+      "text": "We never compromise on quality. From fabrics to construction, every element is carefully chosen for excellence."
+    },
+    {
+      "title": "Innovation",
+      "text": "We embrace innovation to stay ahead of fashion trends and offer unique solutions to our clients."
+    }
+  ],
+  "team_title": "Our Team",
+  "news": {
+    "title": "Latest News",
+    "subtitle": "Stay updated with our latest news and insights.",
+    "items": {
+      "1": {
+        "title": "Fantastic final. Uzbekistan youth became Asian champions playing with 9 men.",
+        "description": "April 20. Taif. King Fahd Stadium. Goals: Muhammad Hakimov (50', penalty), Sadriddin Hasanov (71'). Uzbekistan — Ne’matulloh Rustamjonov, Muhammad Hakimov, and others...",
+        "content": "On April 20, at King Fahd Stadium in Taif, Saudi Arabia, the final of the AFC U-17 Championship took place. Facing the host team, Uzbekistan showed great bravery and secured a confident victory. In the first half alone, Uzbekistan was reduced to 9 men: in the 39th minute, Nurbek Sarsenbayev struck an opponent with his foot and was sent off. The referee confirmed the red card decision after VAR review. Despite the setback, the Uzbek team triumphed heroically, with goals from Hakimov and Hasanov."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "paragraph1": "These Terms of Service govern your use of our platform. By accessing or using our services, you agree to comply with these terms.",
+    "paragraph2": "You are responsible for maintaining the confidentiality of your account details and are liable for any activities that occur under your account.",
+    "paragraph3": "We reserve the right to suspend or terminate your access to our services if you violate any of these terms."
+  }
+}
