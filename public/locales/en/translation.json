@@ -114,5 +114,14 @@
     "paragraph1": "These Terms of Service govern your use of our platform. By accessing or using our services, you agree to comply with these terms.",
     "paragraph2": "You are responsible for maintaining the confidentiality of your account details and are liable for any activities that occur under your account.",
     "paragraph3": "We reserve the right to suspend or terminate your access to our services if you violate any of these terms."
+  },
+  "catalog": {
+    "premium": "Our Collection",
+    "quality": "Premium menswear with quality and style",
+    "shop": "Categories",
+    "suits": "Sizes",
+    "tshirts": "Colors",
+    "clearFilters": "Clear Filters",
+    "noProducts": "No products found."
   }
 }

@@ -37,6 +37,7 @@ const Catalog = () => {
       setLoading(false);
     }
   };
+
   useEffect(() => {
     getProduct();
   }, []);
@@ -75,14 +76,14 @@ const Catalog = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 space-y-10">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-2">{t('home.premium') || 'Our Collection'}</h1>
-        <p className="text-gray-600">{t('home.quality') || 'Premium menswear with quality and style'}</p>
+        <h1 className="text-4xl font-bold mb-2">{t('catalog.premium')}</h1>
+        <p className="text-gray-600">{t('catalog.quality')}</p>
       </div>
 
       <div className="flex flex-col md:flex-row gap-10">
         <aside className="md:w-64 w-full space-y-6 text-sm">
           <div>
-            <h3 className="font-semibold mb-2">{t('footer.shop') || 'Categories'}</h3>
+            <h3 className="font-semibold mb-2">{t('catalog.shop')}</h3>
             <ul className="space-y-2">
               {categories.map((category) => (
                 <li
@@ -97,7 +98,7 @@ const Catalog = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-2">{t('footer.suits') || 'Sizes'}</h3>
+            <h3 className="font-semibold mb-2">{t('catalog.suits')}</h3>
             <div className="flex flex-wrap gap-2">
               {sizes.map((size) => (
                 <button
@@ -112,7 +113,7 @@ const Catalog = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-2">{t('footer.tshirts') || 'Colors'}</h3>
+            <h3 className="font-semibold mb-2">{t('catalog.tshirts')}</h3>
             <div className="flex flex-wrap gap-2">
               {colors.map((color) => (
                 <button
@@ -127,14 +128,14 @@ const Catalog = () => {
             </div>
           </div>
 
-          <button onClick={clearFilters} className="text-red-500 underline hover:text-red-600">Clear Filters</button>
+          <button onClick={clearFilters} className="text-red-500 underline hover:text-red-600">{t('catalog.clearFilters')}</button>
         </aside>
 
         <div className="flex-1">
           {loading ? (
             <p className="text-center">Loading...</p>
           ) : filteredProducts.length === 0 ? (
-            <p className="text-center text-gray-600">No products found.</p>
+            <p className="text-center text-gray-600">{t('catalog.noProducts')}</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {filteredProducts.map((product) => (
