@@ -13,7 +13,7 @@ export default function SaveCards() {
     setIsModalOpen(true);
   };
   const SendMessage = async (event, setLoading, setButtonText, setIsModalOpen) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы
+    event.preventDefault(); 
     setLoading(true);
     setButtonText("Sending...");
 
