@@ -7,7 +7,9 @@ export default function NewsDetail() {
 
     const news = newsItems.find((item) => item.id === id);
 
-    if (!news) return <div className="text-center mt-20 text-red-500">News not found</div>;
+    if (!news) {
+        return <div className="text-center mt-20 text-red-500">News not found</div>;
+    }
 
     return (
         <div className='max-w-6xl mx-auto p-6 mb-4 mt-10 bg-white rounded-2xl shadow-xl'>
