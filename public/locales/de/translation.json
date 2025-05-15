@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "catalog": "Katalog",
+    "about": "Über uns",
+    "news": "Nachrichten",
+    "contact": "Kontakt"
+  },
+  "showcase": {
+    "season": "Frühling/Sommer 2025",
+    "title": "Herrenmode in Premiumqualität",
+    "subtitle": "Hochwertige Stoffe. Perfekte Passform. Zeitloser Stil.",
+    "button": "Kollektion entdecken"
+  },
+  "home": {
+    "featuredTitle": "Empfohlene Produkte",
+    "featuredDesc": "Entdecken Sie unsere sorgfältig ausgewählte Kollektion hochwertiger Herrenmode aus den besten Materialien mit viel Liebe zum Detail.",
+    "viewAll": "Alle Produkte anzeigen",
+    "newArrivals": "Neuheiten"
+  },
+  "footer": {
+    "description": "Hochwertige Herrenmode mit Fokus auf erstklassige Materialien und perfekte Passform.",
+    "shop": "SHOP",
+    "viewAll": "Alle Produkte anzeigen",
+    "tshirts": "T-Shirts",
+    "shorts": "Shorts",
+    "suits": "Anzüge",
+    "company": "UNTERNEHMEN",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "deliveryTerm": "Lieferbedingungen",
+    "subscribeTitle": "ABONNIEREN SIE UNSEREN NEWSLETTER",
+    "subscribeDescription": "Abonnieren Sie, um Updates, exklusive Angebote und mehr zu erhalten.",
+    "placeholderEmail": "E-Mail",
+    "successMessage": "Nachricht erfolgreich gesendet! 🎉",
+    "errorMessage": "Es ist ein Fehler aufgetreten. ❌",
+    "copyright": "© 2025 AORON. Alle Rechte vorbehalten."
+  },
+  "title": "Über AORON",
+  "description": "AORON ist eine Produktionsmarke, die stilvolle, qualitativ hochwertige und wettbewerbsfähige Kleidung für B2B-Partnerschaften anbietet. Seit 1991 sind wir tätig und spezialisieren uns auf Herren- und Damenbekleidung – im Großhandel, für Einzelhandelsketten und Sonderaufträge für Marken und Boutiquen.",
+  "directions_title": "Heute entwickeln wir zwei Richtungen:",
+  "directions": [
+    "Prince – eine klassische Herrenanzuglinie, bewährt in Qualität und Zeit",
+    "AORON – eine moderne Marke mit erweitertem Sortiment: von Freizeitkleidung bis hin zu Accessoires und Schuhen"
+  ],
+  "production_title": "Produktionsanlagen",
+  "production_text": "Unser Unternehmen begann mit einem Team von 4 Personen und beschäftigt heute über 100 Mitarbeiter. Im Sommer 2025 eröffnen wir eine neue Fabrik mit der Möglichkeit zur Skalierung – bis zu 500 Mitarbeiter und über 5000 Einheiten pro Monat.",
+  "offer_title": "Wir bieten:",
+  "offer_list": [
+    "Stabile Mengen und Lieferzeiten",
+    "Qualitätskontrolle in jeder Phase",
+    "Flexibilität für Private Label",
+    "Individueller Ansatz für B2B-Kunden"
+  ],
+  "why_title": "Warum wir?",
+  "why_list": [
+    "Mehr als 30 Jahre Erfahrung auf dem Markt Usbekistans",
+    "Voller Produktionszyklus – vom Design bis zur Verpackung",
+    "Fähigkeit, Kollektionen für Ihre Marke zu erstellen",
+    "Moderne Modelle, inspiriert von globalen Trends",
+    "Günstige Bedingungen für Distributoren, Marktplätze und Läden"
+  ],
+  "assortment_title": "Neue Kollektion 2025",
+  "assortment_subtitle": "T-Shirts, Hemden, Shorts für Männer und Frauen",
+  "assortment_list": [
+    "T-Shirts, Hemden, Shorts für Männer und Frauen",
+    "Schuhe, Taschen, Gürtel, Accessoires",
+    "Maßanfertigungen",
+    "Zusammenarbeiten und Kapselkollektionen nach Wunsch"
+  ],
+  "cooperation_title": "Bereit zur Zusammenarbeit",
+  "cooperation_subtitle": "Wir sind offen für Zusammenarbeit mit:",
+  "cooperation_list": [
+    "Großhändlern",
+    "Bekleidungsgeschäften",
+    "Marktplätzen",
+    "Internationalen Käufern",
+    "Marken, die Kollektionen unter eigenem Namen produzieren möchten"
+  ],
+  "contact_text": "Kontaktieren Sie uns für Kataloge und Muster",
+  "mission_title": "Unsere Mission",
+  "mission_text": "Hochwertige Herrenbekleidung zu schaffen, die Männer darin bestärkt, gut auszusehen und sich gut zu fühlen – mit Fokus auf Qualität, Nachhaltigkeit und ethischen Praktiken.",
+  "values_title": "Unsere Werte",
+  "values": [
+    {
+      "title": "Nachhaltigkeit",
+      "text": "Wir engagieren uns für umweltfreundliche Beschaffung und nachhaltige Praktiken."
+    },
+    {
+      "title": "Qualität zuerst",
+      "text": "Wir gehen keine Kompromisse bei der Qualität ein. Jedes Element wird sorgfältig ausgewählt."
+    },
+    {
+      "title": "Innovation",
+      "text": "Wir setzen auf Innovation, um Modetrends voraus zu sein und unseren Kunden besondere Lösungen zu bieten."
+    }
+  ],
+  "team_title": "Unser Team",
+  "news": {
+    "title": "Neueste Nachrichten",
+    "subtitle": "Bleiben Sie mit unseren aktuellen Nachrichten und Einblicken auf dem Laufenden.",
+    "items": {
+      "1": {
+        "title": "Fantastisches Finale. Usbekistans Jugendteam wird mit nur 9 Spielern Asienmeister.",
+        "description": "20. April. Taif. König-Fahd-Stadion. Tore: Muhammad Hakimov (50', Elfmeter), Sadriddin Hasanov (71'). Usbekistan — Ne'matulloh Rustamjonov, Muhammad Hakimov und andere...",
+        "content": "Am 20. April fand im König-Fahd-Stadion in Taif, Saudi-Arabien, das Finale der U-17-Asienmeisterschaft statt. Das usbekische Team trat gegen die Gastgeber an, zeigte große Tapferkeit und errang einen überzeugenden Sieg. Bereits in der ersten Halbzeit spielte Usbekistan nur noch mit neun Mann: In der 39. Minute trat Nurbek Sarsenbayev einen Gegenspieler und wurde vom Platz gestellt. Der Schiedsrichter bestätigte die rote Karte nach dem VAR-Check. Trotzdem erzielte Usbekistan zwei Tore und wurde verdienter Asienmeister."
+      }
+    }
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "paragraph1": "Diese Nutzungsbedingungen regeln Ihre Nutzung unserer Plattform. Durch den Zugriff auf oder die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu.",
+    "paragraph2": "Sie sind für die Vertraulichkeit Ihrer Kontodaten verantwortlich und haften für alle Aktivitäten, die unter Ihrem Konto stattfinden.",
+    "paragraph3": "Wir behalten uns das Recht vor, Ihren Zugang zu unseren Diensten zu sperren oder zu kündigen, wenn Sie gegen diese Bedingungen verstoßen."
+  },
+  "catalog": {
+    "premium": "Unsere Kollektion",
+    "quality": "Premium-Menswear mit Qualität und Stil",
+    "shop": "Kategorien",
+    "suits": "Größen",
+    "tshirts": "Farben",
+    "clearFilters": "Filter löschen",
+    "noProducts": "Keine Produkte gefunden."
+  }
+}
