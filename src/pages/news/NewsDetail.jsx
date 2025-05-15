@@ -13,7 +13,7 @@ export default function NewsDetail() {
         <div className='max-w-6xl mx-auto p-6 mb-4 mt-10 bg-white rounded-2xl shadow-xl'>
             <button
                 onClick={() => navigate(-1)}
-                className='text-blue-600 hover:text-blue-800 text-sm mb-6 inline-flex items-center gap-1 transition duration-200'
+                className='text-blue-600 hover:text-blue-800 text-sm mb-6 inline-flex items-center gap-1 transition duration-200 font-inter'
             >
                 ← Orqaga qaytish
             </button>
@@ -27,7 +27,7 @@ export default function NewsDetail() {
                     />
                 </div>
 
-                <div className='w-full space-y-4'>
+                <div className='w-full space-y-4 font-inter'>
                     <h1 className='text-3xl font-bold text-gray-900'>{news.title}</h1>
                     <p className='text-gray-700 text-lg leading-loose'>{news.content}</p>
                 </div>
