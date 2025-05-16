@@ -122,5 +122,29 @@
     "tshirts": "Farben",
     "clearFilters": "Filter löschen",
     "noProducts": "Keine Produkte gefunden."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Kontaktieren Sie uns bei Fragen zu unseren Produkten oder Dienstleistungen.",
+    "contactInfo": "Kontaktinformationen",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "phoneHours": "Mo-Fr, 9:00–18:00",
+    "address": "Adresse",
+    "formTitle": "Kontaktformular",
+    "name": "Name",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "successMessage": "Nachricht erfolgreich gesendet!",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1": {
+      "q": "Wie finde ich meine Größe?",
+      "a": "Sie können unseren Größenratgeber auf jeder Produktseite einsehen. Wenn Sie sich nicht sicher sind, wenden Sie sich bitte an unseren Kundensupport."
+    },
+    "faq2": {
+      "q": "Wie lautet Ihre Rückgabebedingung?",
+      "a": "Wir bieten ein 30-tägiges Rückgaberecht für ungetragene Artikel in der Originalverpackung. Weitere Informationen finden Sie auf unserer Seite für Rückgaben und Umtausch."
+    }
   }
 }

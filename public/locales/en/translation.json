@@ -123,5 +123,29 @@
     "tshirts": "Colors",
     "clearFilters": "Clear Filters",
     "noProducts": "No products found."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for any questions about our products or services.",
+    "contactInfo": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "phoneHours": "Mon-Fri, 9am-6pm",
+    "address": "Address",
+    "formTitle": "Contact Form",
+    "name": "Name",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1": {
+      "q": "How do I find my size?",
+      "a": "You can refer to our size guide which is available on each product page. If you're still unsure, feel free to contact our customer support team for assistance."
+    },
+    "faq2": {
+      "q": "What is your return policy?",
+      "a": "We offer a 30-day return policy for unworn items in their original packaging. Please visit our Returns & Exchanges page for more details."
+    }
   }
 }
